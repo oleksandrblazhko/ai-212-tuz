@@ -1,0 +1,38 @@
+@startuml
+
+title DataModel
+left to right direction
+hide circle
+
+entity "User" as t01 {
+    (PK) user_id
+    --
+    name
+    email
+    password
+    phone_number
+}
+
+entity "Order" as t02 {
+    (PK) order_id
+    --
+    date
+    order_status
+    user_adress
+    (FK)user_num
+    (FK) cook_num
+}
+
+entity "Cook" as t03 {
+    (PK) cook_id
+    --
+    name
+    email
+    password
+}
+
+
+t01 --{ t02
+t03 --{ t02 
+
+@enduml
