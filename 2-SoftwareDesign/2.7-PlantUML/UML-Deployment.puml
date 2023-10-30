@@ -1,0 +1,23 @@
+@startuml
+
+title UML-діаграма розгортання ПП (PL рівень)
+
+left to right direction
+
+skinparam componentStyle uml1
+
+node "<<Computer>>" as computer {
+	node "<<OS Windows, OS Linux>>" {
+	  node "<<Web-browser>>" {
+		  component [ *.js(React)]
+	  }
+	}
+}
+
+interface Monitor
+interface ComputerMouse
+
+Monitor - computer
+ComputerMouse - computer
+
+@enduml
