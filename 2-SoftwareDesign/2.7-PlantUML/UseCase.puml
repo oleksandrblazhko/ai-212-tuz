@@ -1,0 +1,16 @@
+@startuml
+
+title UML-UseCase
+left to right direction
+actor :GourmetMusicLover:
+
+rectangle Software {
+
+    usecase (Registration/Authorization)
+    usecase (Make a food order)
+
+   :GourmetMusicLover: -- (Registration/Authorization)
+   (Registration/Authorization) .> (Make a food order) : include
+}
+
+@enduml
