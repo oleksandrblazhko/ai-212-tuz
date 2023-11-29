@@ -14,7 +14,7 @@ BEGIN
     ELSIF v_result = -3 THEN
         DBMS_OUTPUT.PUT_LINE('Помилка! Не введено назву чи категорію ресторану.');
     ELSIF v_result = -4 THEN
-        DBMS_OUTPUT.PUT_LINE('Помилка! Ресторан з вказаною назвою не існує.');
+        DBMS_OUTPUT.PUT_LINE('Помилка! Ресторан з вказаними назвою або категорією не існує.');
     END IF;
 END;
 /
